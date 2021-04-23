@@ -1,0 +1,49 @@
+#%RAML 0.8
+title: Remote Medicine Example API
+mediaType: application/json
+/cases:
+  description: The urgent cases created by the remote medicine partner
+  get:
+    description: Get a list of cases
+    queryParameters:
+      startFrom:
+        type: number
+        description: The number of the first question, where 0 means latest
+        default: 0
+      numberToReturn:
+        type: number
+        description: How many questions to return
+        default: 5
+    responses:
+      200:
+        body:
+          example: |
+            {
+              "totalNumber": 3781,
+              "cases":
+              [
+                {
+                  "id": "c68732",
+                  "overview": "The patient just collapsed",
+                  "location": "Oro Valley",
+                  "created": "Sat, 24 May 2014 23:18:01 GMT"
+                },
+                {
+                  "id": "c98729",
+                  "overview": "The patient felt severe headaches and saw flashes",
+                  "location": "Picacho Peak",
+                  "created": "Fri, 25 Apr 2014 04:34:00 GMT"
+                }
+              ]
+            }
+  post:
+    body:
+      application/json:
+          schema: !include schema/a-req-schema.json
+        # example: !include example/a-req-example.json
+    responses:
+      200:
+        body:
+          application/json:
+            #  schema: !include schema/a-resp-schema.json
+            #  example: !include example/a-resp-example.json

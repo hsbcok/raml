@@ -1,0 +1,17 @@
+{
+  "controller":{
+    "name":"c1",
+    "requestMapping":"/users",
+    "inputType":"String",
+    "inputContentId":"controllerInput",
+    "outputType":"String",
+    "outputContentId":"controllerOutput"
+  },
+  "service":{
+    "type":"callAPI",
+    "APIURL":"",
+    "name":"s1"
+
+
+  }
+}

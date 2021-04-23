@@ -1,0 +1,34 @@
+{
+  "properties":{
+    "specMetadata":{
+      "type":"object",
+      "paymentType":{
+        "type":"string",
+        "minLength":0,
+        "maxLength":100,
+        "pattern":"^.*"
+      }
+    },
+    "instruction":{
+      "type":"object",
+      "parm1":{
+        "type":"string",
+        "minLength":0,
+        "maxLength":100,
+        "pattern":"^.*"
+      },
+      "parm2":{
+        "type":"string",
+        "minLength":0,
+        "maxLength":100,
+        "pattern":"^.*"
+      },
+      "parm3":{
+        "type":"string",
+        "minLength":0,
+        "maxLength":100,
+        "pattern":"^.*"
+      }
+    }
+  }
+}
